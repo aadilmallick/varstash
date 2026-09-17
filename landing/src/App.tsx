@@ -119,7 +119,7 @@ function App() {
   const twWordIndex = useRef(0);
   const twDeleting = useRef(false);
 
-  const twWords = ["AI Builders", "Freelancers", "Solo devs", "Small Startups"];
+  const twWords = ["Ship fast", "Build fast", "Vibe fast"].map((w) => `${w}.`);
 
   const toggleFaq = (i: number) => {
     setOpenFaq((prev) => (prev === i ? -1 : i));
@@ -308,22 +308,25 @@ function App() {
             <span>🔒</span> 100% Local-First &amp; Client-Side Encrypted
           </div>
 
-          <h1 className="max-w-4xl text-2xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.14] tracking-tight mb-6 max-h-12 sm:max-h-36 overflow-y-visible">
-            The Visual API{" "}
-            <span className="text-orange-500">Key &amp; Secret Manager</span>
+          <h1 className="max-w-4xl text-2xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.14] tracking-tight mb-6 max-h-12 sm:max-h-36 overflow-y-visible capitalize">
+            Never lose your <span className="text-orange-500">API keys</span>
             {" "}
-            for{" "}
+            again.<br />
+            Manage <span className="text-emerald-500">AI Spend</span>{"  "}
+            Like a pro.
+            <br />
             <span className="text-blue-600 inline-block min-w-[2ch]">
               {typedText || "\u00A0"}
             </span>
-            <span className="text-orange-500 animate-pulse font-mono">|</span>
-            {" "}
-            Who Hate <span className="text-blue-600">DevOps Complexity</span>
+            <span className="text-blue-500 animate-pulse font-mono relative bottom-2">
+              |
+            </span>
           </h1>
 
           <p className="max-w-2xl pt-12 text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed mb-8 mx-auto">
-            Organize, share, and track live API spend across OpenAI, Anthropic,
-            and OpenRouter. Zero CLI required. Free forever for local storage.
+            Organize, share, and track live API spend across OpenAI, Fal.AI,
+            Anthropic, and OpenRouter. Zero CLI required. Free forever for local
+            storage.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto px-4">
@@ -331,7 +334,7 @@ function App() {
               href="#pricing"
               className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-7 py-3.5 rounded-xl text-base font-bold shadow-lg shadow-orange-500/25 hover:shadow-orange-500/35 transition-all transform active:scale-95 text-center cursor-pointer"
             >
-              Start Managing Secrets — 100% Free
+              Start Managing Secrets for Free
             </a>
             <a
               href={constants.getVideoUrl()}
@@ -888,7 +891,13 @@ function ClerkPricingTable() {
         <span className="text-orange-500">Start Now</span>
       </h2>
       <div className="max-w-4xl mx-auto p-1">
-        <Suspense fallback={<div className="text-center py-8 text-slate-500 font-medium">Loading pricing plans...</div>}>
+        <Suspense
+          fallback={
+            <div className="text-center py-8 text-slate-500 font-medium">
+              Loading pricing plans...
+            </div>
+          }
+        >
           <ClerkProvider publishableKey={clerkPublishableKey}>
             <PricingTable
               appearance={{

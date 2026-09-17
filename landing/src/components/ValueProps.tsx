@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { valueCards } from "../data";
+import { constants } from "../constants";
 
 export const ValueProps = memo(function ValueProps() {
   return (
@@ -69,6 +70,22 @@ export const ValueProps = memo(function ValueProps() {
             </p>
           </div>
         ))}
+      </div>
+
+      {/* CTA buttons */}
+      <div className="flex mt-12 flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mx-auto w-fit px-12 py-3 shadow-2xl rounded-full border border-orange-100 bg-orange-50">
+        <a
+          href="#pricing"
+          className="w-full sm:w-auto bg-orange-100 text-orange-600 hover:bg-orange-500 hover:text-white px-6 py-3.5 rounded-xl text-base font-bold flex items-center justify-center gap-2.5 transition-colors text-center cursor-pointer"
+        >
+          Switch to Pro
+        </a>
+        <a
+          href={constants.getUrl()}
+          className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-7 py-3.5 rounded-xl text-base font-bold shadow-lg shadow-orange-500/25 hover:shadow-orange-500/35 transition-all transform active:scale-95 text-center cursor-pointer"
+        >
+          Start Free
+        </a>
       </div>
     </section>
   );

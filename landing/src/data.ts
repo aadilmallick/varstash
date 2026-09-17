@@ -32,9 +32,11 @@ export const paymentConfig = {
 };
 
 export const navLinks: NavLink[] = [
-  { label: "Features", href: "#features" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Features", href: "/#features" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Roadmap", href: "/roadmap" },
+  { label: "About", href: "/about" },
 ];
 
 export const valueCards: ValueCard[] = [
@@ -84,16 +86,15 @@ export const steps: Step[] = [
 export const freeFeatures: string[] = [
   "Unlimited key storage",
   "Local IndexedDB encryption",
-  "Visual profiles & folders",
-  "Manual token export",
+  "Manual E2E encrypted handoffs",
+  "TouchID passkey vault lock (Coming Soon)",
 ];
 
 export const proFeatures: string[] = [
   "Everything in Free",
-  "Real-time API spend monitoring (OpenAI, Anthropic)",
+  "Real-time API spend monitoring (OpenAI, Anthropic, OpenRouter)",
   "Automated magic-link email handoffs",
   "Spending cap alerts",
-  "TouchID / WebAuthn passkey vault lock",
 ];
 
 export const faqData: FaqItemData[] = [

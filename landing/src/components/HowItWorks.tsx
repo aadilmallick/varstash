@@ -2,6 +2,7 @@ import { memo, useEffect, useState } from "react";
 import { steps } from "../data";
 import { cn } from "../lib/utils";
 import { AISpendCycleAnimation } from "./AIIcons";
+import { constants } from "../constants";
 
 export const HowItWorks = memo(function HowItWorks() {
   const [phase, setPhase] = useState(0);

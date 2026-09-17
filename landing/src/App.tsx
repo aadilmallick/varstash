@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { AISpend } from "./components/AISpend";
 import { AppPreview } from "./components/AppPreview";
 import { FaqSection } from "./components/FaqSection";
 import { Footer } from "./components/Footer";
@@ -86,6 +87,9 @@ function App() {
 
         {/* APP INTERACTIVE MOCKUP PREVIEW SECTION */}
         <AppPreview />
+
+        {/* AI SPEND TELEMETRY & PIP SHOWCASE SECTION */}
+        <AISpend />
 
         {/* VALUE PROPOSITIONS SECTION */}
         <ValueProps />
